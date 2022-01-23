@@ -7,6 +7,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
+				sh 'echo /jenkin-devops-microservice/Dockerfile'
 				sh 'mvn --version'
 				echo "Build"
 			}
