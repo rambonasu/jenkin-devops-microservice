@@ -4,7 +4,7 @@
 pipeline {
 	//agent any
 	agent { docker { image 'maven:3.8.4'} }
-	
+
 	stages {
 		stage('Build') {
 			steps {
@@ -22,8 +22,7 @@ pipeline {
 	            echo "Integration Test"
 			}
 		}
-	}
-}	
+	}	
 
 post {
 		always {
@@ -35,5 +34,5 @@ post {
 		failure {
 			echo 'I run when you fail'
 		}
-	}
+    }
 }
